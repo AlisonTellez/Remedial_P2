@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassAccesoDatos", "ClassAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassEntidades", "ClassEntidades\ClassEntidades.csproj", "{6B227DBF-272F-4907-B3BA-C5D07A11308C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLogicaNegocios", "ClassLogicaNegocios\ClassLogicaNegocios.csproj", "{01A092DB-F0BB-4E67-B843-33F897416EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCapaPresentacion", "WebCapaPresentacion\WebCapaPresentacion.csproj", "{F526892A-3BE1-4627-8A17-6551FAE26D43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6B227DBF-272F-4907-B3BA-C5D07A11308C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B227DBF-272F-4907-B3BA-C5D07A11308C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B227DBF-272F-4907-B3BA-C5D07A11308C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A092DB-F0BB-4E67-B843-33F897416EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A092DB-F0BB-4E67-B843-33F897416EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A092DB-F0BB-4E67-B843-33F897416EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A092DB-F0BB-4E67-B843-33F897416EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F526892A-3BE1-4627-8A17-6551FAE26D43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F526892A-3BE1-4627-8A17-6551FAE26D43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F526892A-3BE1-4627-8A17-6551FAE26D43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F526892A-3BE1-4627-8A17-6551FAE26D43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

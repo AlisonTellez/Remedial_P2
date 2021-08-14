@@ -1,0 +1,6 @@
+E:\Aranza\Remedial_P2\RemedialP2\ClassAccesoDatos\bin\Debug\ClassAccesoDatos.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassAccesoDatos\bin\Debug\ClassAccesoDatos.pdb
+E:\Aranza\Remedial_P2\RemedialP2\ClassAccesoDatos\obj\Debug\ClassAccesoDatos.csprojAssemblyReference.cache
+E:\Aranza\Remedial_P2\RemedialP2\ClassAccesoDatos\obj\Debug\ClassAccesoDatos.csproj.CoreCompileInputs.cache
+E:\Aranza\Remedial_P2\RemedialP2\ClassAccesoDatos\obj\Debug\ClassAccesoDatos.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassAccesoDatos\obj\Debug\ClassAccesoDatos.pdb
