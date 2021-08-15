@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarProfe.aspx.cs" Inherits="WebCapaPresentacion.RegistrarProfe" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actualizar_RegistroProfesor.aspx.cs" Inherits="WebCapaPresentacion.Actualizar_RegistroProfesor" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Registro Profesor</title>
+     <title>Registro Profesor</title>
 
     <!--Bootstrap.-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -73,13 +73,9 @@
                 <asp:DropDownList ID="dlestadocivil" runat="server"></asp:DropDownList>
             </div>
             <br/>
-           <center><div style="margin-left:400px;">
-                <asp:Button ID="btnInsertar" runat="server" class="btn btn-primary" Text="Registrar" OnClick="Button1_Click"/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click" />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEliminar" runat="server" class="btn btn-primary" Text="Eliminar" OnClick="btnEliminar_Click"/>
-            </div></center> 
+               <div style="margin-left:400px;">
+               <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click" />
+               </div> 
             <!--Formulario.-->
 
         </div>

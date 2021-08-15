@@ -141,7 +141,7 @@ namespace ClassAccesoDatos
             Boolean salida = false;
             SqlCommand vocho = null;
 
-            if (conexAbierto == null)
+            if (conexAbierto != null)
             {
                 vocho = new SqlCommand();
                 vocho.CommandText = SentenciaSql;

@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Actualizar_RegistroProfesor.aspx" />
     <Content Include="img\logo.png" />
     <Content Include="RegistrarGradoEspecialidad.aspx" />
     <Content Include="RegistrarPerfilProfe.aspx" />
@@ -74,6 +75,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actualizar_RegistroProfesor.aspx.cs">
+      <DependentUpon>Actualizar_RegistroProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actualizar_RegistroProfesor.aspx.designer.cs">
+      <DependentUpon>Actualizar_RegistroProfesor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarGradoEspecialidad.aspx.cs">
       <DependentUpon>RegistrarGradoEspecialidad.aspx</DependentUpon>
@@ -105,6 +113,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassEntidades\ClassEntidades.csproj">
+      <Project>{6b227dbf-272f-4907-b3ba-c5d07a11308c}</Project>
+      <Name>ClassEntidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLogicaNegocios\ClassLogicaNegocios.csproj">
+      <Project>{01a092db-f0bb-4e67-b843-33f897416eb4}</Project>
+      <Name>ClassLogicaNegocios</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

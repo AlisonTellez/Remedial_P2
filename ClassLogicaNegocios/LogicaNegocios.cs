@@ -16,7 +16,7 @@ namespace ClassLogicaNegocios
     public class LogicaNegocios
     {
         //Cadena de conexión.
-        private AccesoDatos obAcc = new AccesoDatos(@"Data Source=LAPTOP-99LGH8E7\SQLEXPRESS; Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true;");
+        private AccesoDatos cadconex = new AccesoDatos(@"Data Source=LAPTOP-99LGH8E7\SQLEXPRESS; Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true;");
 
         //Insertar_Profesor.
         public Boolean Insertar_Profesor(Profesor nuevo_profesor, ref string msjSalida)
@@ -95,7 +95,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "insert into Profesor values(@registro_empleado,@nombre,@ap_pat,@ap_mat,@genero,@categoria,@correo,@celular,@f_edocivil);";
 
             Boolean salida = false;
-            salida = obAcc.ModificaBDMasSegura(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida, param1);
+            salida = cadconex.ModificaBDMasSegura(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida, param1);
 
             return salida;
         } // Fin Insertar_Profesor.
@@ -139,10 +139,70 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "insert into GradoEspecialidad values(@titulo,@institucion,@pais,@extra);";
 
             Boolean salida = false;
-            salida = obAcc.ModificaBDMasSegura(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida, param1);
+            salida = cadconex.ModificaBDMasSegura(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida, param1);
 
             return salida;
         }//Fin Insertar_GradoEspecialidad.
 
+        //Eliminar_Profesor.
+        public string Eliminar_Profesor(string nombre, ref string msjSalida)
+        {
+            string sentenciaSql = "delete from  Profesor where Nombre='" + nombre + "'";
+
+            SqlDataReader salida = null;
+            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+
+            return salida.ToString();
+        } // Fin Insertar_Profesor.
+
+
+        //Mostrar datos de la tabla EstadoCivil.
+        public List<EstadoCivil> MostrarDatos_EstadoCivil(ref string msjSalida)
+        {
+            SqlConnection conex = null;
+            string query = "select * from EstadoCivil";
+
+            conex = cadconex.AbrirConexion(ref msjSalida);
+
+            SqlDataReader datos = null;
+            datos = cadconex.ConsultaReader(query, conex, ref msjSalida);
+
+            List<EstadoCivil> listaEstadoC = new List<EstadoCivil>();
+            if (datos != null)
+            {
+                while (datos.Read())
+                {
+                    listaEstadoC.Add(new EstadoCivil
+                    {
+                        id_edo = (byte)datos[0],
+                        estado = datos[1].ToString(),
+                        extra = datos[2].ToString()
+                    }
+                     );
+                }
+            }
+            else
+            {
+                listaEstadoC = null;
+            }
+            conex.Close();
+            conex.Dispose();
+
+            return listaEstadoC;
+        }
+
+        //Actualizar_Profesor.
+        public string Actualizar_Profesor(int registroN, string nombreN, string apN, string apmN, string generoN, string categoriaN,
+            string correoN, string celularN, int F_edoCivilN, string Nombre, ref string msjSalida)
+        {
+            string sentenciaSql = "update Profesor set RegistroEmpleado='" + registroN + "' ,  Nombre='" + nombreN + "', Ap_pat='" + apN + "'," +
+             " Ap_Mat='" + apmN + "', Genero='" + generoN + "', Categoria='" + categoriaN + "', Correo='" + correoN + "', Celular='" + celularN + "', " +
+             "F_EdoCivil='" + F_edoCivilN + "'where nombre='" + Nombre +"'";
+
+            SqlDataReader salida = null;
+            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+
+            return salida.ToString();
+        } // Fin Insertar_Profesor.
     }
 }

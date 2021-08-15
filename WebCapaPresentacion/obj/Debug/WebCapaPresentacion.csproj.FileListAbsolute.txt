@@ -34,3 +34,9 @@ E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\obj\Debug\WebCapaPresentaci
 E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\obj\Debug\WebCapaPresentacion.csproj.CopyComplete
 E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\obj\Debug\WebCapaPresentacion.dll
 E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\obj\Debug\WebCapaPresentacion.pdb
+E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\bin\ClassEntidades.dll
+E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\bin\ClassLogicaNegocios.dll
+E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\bin\ClassAccesoDatos.dll
+E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\bin\ClassEntidades.pdb
+E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\bin\ClassLogicaNegocios.pdb
+E:\Aranza\Remedial_P2\RemedialP2\WebCapaPresentacion\bin\ClassAccesoDatos.pdb

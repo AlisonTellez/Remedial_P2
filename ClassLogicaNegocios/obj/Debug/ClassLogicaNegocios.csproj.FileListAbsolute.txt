@@ -1,0 +1,11 @@
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\bin\Debug\ClassLogicaNegocios.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\bin\Debug\ClassLogicaNegocios.pdb
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\bin\Debug\ClassAccesoDatos.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\bin\Debug\ClassEntidades.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\bin\Debug\ClassAccesoDatos.pdb
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\bin\Debug\ClassEntidades.pdb
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\obj\Debug\ClassLogicaNegocios.csprojAssemblyReference.cache
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\obj\Debug\ClassLogicaNegocios.csproj.CoreCompileInputs.cache
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\obj\Debug\ClassLogicaNegocios.csproj.CopyComplete
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\obj\Debug\ClassLogicaNegocios.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassLogicaNegocios\obj\Debug\ClassLogicaNegocios.pdb

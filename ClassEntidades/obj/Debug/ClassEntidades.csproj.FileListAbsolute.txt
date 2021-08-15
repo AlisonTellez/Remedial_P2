@@ -1,0 +1,6 @@
+E:\Aranza\Remedial_P2\RemedialP2\ClassEntidades\bin\Debug\ClassEntidades.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassEntidades\bin\Debug\ClassEntidades.pdb
+E:\Aranza\Remedial_P2\RemedialP2\ClassEntidades\obj\Debug\ClassEntidades.csprojAssemblyReference.cache
+E:\Aranza\Remedial_P2\RemedialP2\ClassEntidades\obj\Debug\ClassEntidades.csproj.CoreCompileInputs.cache
+E:\Aranza\Remedial_P2\RemedialP2\ClassEntidades\obj\Debug\ClassEntidades.dll
+E:\Aranza\Remedial_P2\RemedialP2\ClassEntidades\obj\Debug\ClassEntidades.pdb
