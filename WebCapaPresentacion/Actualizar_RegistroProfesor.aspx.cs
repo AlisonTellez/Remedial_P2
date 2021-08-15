@@ -32,17 +32,20 @@ namespace WebCapaPresentacion
             else
             {
                 ob1 = (LogicaNegocios)Session["ob1"];
-
             }
         }
 
+        //btn_Actualizar_RegistroProfesor.
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             string mensaje = "";
             ob1.Actualizar_Profesor(Convert.ToInt16(txtregisempleado.Text), txtnombre.Text, txtapp.Text, txtapm.Text, dlgenero.SelectedValue,
                 txtcategoria.Text, txtcorreo.Text, txtcelular.Text, Convert.ToInt16(dlestadocivil.SelectedValue), txtnombre.Text = (string)Session["nombre"] , ref mensaje);
-        }
 
+            Response.Redirect("RegistrarProfe.aspx");
+        }//btn_Actualizar_RegistroProfesor.
+
+        //Mostrar datos EstadoCivil.
         public void Mostrar()
         {
             List<EstadoCivil> listaEstadoCivil = null;
@@ -58,6 +61,6 @@ namespace WebCapaPresentacion
                     dlestadocivil.Items.Add(new ListItem(i.estado, i.id_edo.ToString()));
                 }
             }
-        }
+        }//Mostrar datos EstadoCivil.
     }
 }

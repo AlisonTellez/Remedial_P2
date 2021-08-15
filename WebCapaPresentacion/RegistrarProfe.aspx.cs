@@ -25,10 +25,10 @@ namespace WebCapaPresentacion
             else
             {
                 ob1 = (LogicaNegocios)Session["ob1"];
-
             }
         }
 
+        //btn_InsertarProfesor.
         protected void Button1_Click(object sender, EventArgs e)
         {
             if (txtregisempleado.Text != "" && txtnombre.Text != "" && txtapp.Text != "" && txtapm.Text != "" && dlgenero.Text != ""
@@ -46,18 +46,16 @@ namespace WebCapaPresentacion
                     celular = txtcelular.Text,
                     f_edocivil = Convert.ToInt16(dlestadocivil.SelectedValue)
                 };
-
                 string mensaje = "";
                 ob1.Insertar_Profesor(temp, ref mensaje);
-
             }
             else
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "mensaje2", "msbox('¡Error!','Inserte todos los datos','error')", true);
             }
+        }//btn_InsertarProfesor.
 
-        }
-
+        //Mostrar datos EstadoCivil.
         public void Mostrar()
         {
             List<EstadoCivil> listaEstadoCivil = null;
@@ -73,11 +71,11 @@ namespace WebCapaPresentacion
                     dlestadocivil.Items.Add(new ListItem(i.estado, i.id_edo.ToString()));
                 }
             }
-        }
+        }//Mostrar datos EstadoCivil.
 
+        //btn_ActualizarProfesor.
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-
             Session["registro"] = txtregisempleado.Text;
             Session["nombre"] = txtnombre.Text;
             Session["App"] = txtapp.Text;
@@ -87,9 +85,9 @@ namespace WebCapaPresentacion
             Session["celular"] = txtcelular.Text;
 
             Response.Redirect("Actualizar_RegistroProfesor.aspx");
+        }//btn_ActualizarProfesor.
 
-        }
-
+        //btn_EliminarProfesor.
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
             string mensaje = "";
@@ -102,6 +100,6 @@ namespace WebCapaPresentacion
             txtcategoria.Text = "";
             txtcorreo.Text = "";
             txtcelular.Text = "";
-        }
+        }//btn_EliminarProfesor.
     }
 }

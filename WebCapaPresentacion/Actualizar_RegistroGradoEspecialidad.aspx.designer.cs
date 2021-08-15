@@ -10,7 +10,7 @@
 namespace WebCapaPresentacion {
     
     
-    public partial class RegistrarGradoEspecialidad {
+    public partial class Actualizar_RegistroGradoEspecialidad {
         
         /// <summary>
         /// Control form1.
@@ -94,15 +94,6 @@ namespace WebCapaPresentacion {
         protected global::System.Web.UI.WebControls.TextBox txtextra;
         
         /// <summary>
-        /// Control btnInsertar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInsertar;
-        
-        /// <summary>
         /// Control btnActualizar.
         /// </summary>
         /// <remarks>
@@ -110,14 +101,5 @@ namespace WebCapaPresentacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnActualizar;
-        
-        /// <summary>
-        /// Control btnEliminar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
     }
 }

@@ -153,8 +153,44 @@ namespace ClassLogicaNegocios
             salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
-        } // Fin Insertar_Profesor.
+        }//Fin Eliminar_Profesor.
 
+        //Eliminar_GradoEspecialidad.
+        public string Eliminar_GradoEspecialidad(string extraN, ref string msjSalida)
+        {
+            string sentenciaSql = "delete from  GradoEspecialidad where Extra='" + extraN + "'";
+
+            SqlDataReader salida = null;
+            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+
+            return salida.ToString();
+        }//Fin Eliminar_GradoEspecialidad.
+
+        //Actualizar_Profesor.
+        public string Actualizar_Profesor(int registroN, string nombreN, string apN, string apmN, string generoN, string categoriaN,
+            string correoN, string celularN, int F_edoCivilN, string Nombre, ref string msjSalida)
+        {
+            string sentenciaSql = "update Profesor set RegistroEmpleado='" + registroN + "' ,  Nombre='" + nombreN + "', Ap_pat='" + apN + "'," +
+             " Ap_Mat='" + apmN + "', Genero='" + generoN + "', Categoria='" + categoriaN + "', Correo='" + correoN + "', Celular='" + celularN + "', " +
+             "F_EdoCivil='" + F_edoCivilN + "'where nombre='" + Nombre + "'";
+
+            SqlDataReader salida = null;
+            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+
+            return salida.ToString();
+        }//Fin Actualizar_Profesor.
+
+        //Actualizar_GradoEspecialidad.
+        public string Actualizar_GradoEspecialidad(string titulo, string institucion, string pais, string extra, string extraN, ref string msjSalida)
+        {
+            string sentenciaSql = "update GradoEspecialidad set Titulo='" + titulo + "' ,  Institucion='" + institucion + "', Pais='" + pais + "'," +
+             " Extra='" + extra + "'where Extra='" + extraN + "'";
+
+            SqlDataReader salida = null;
+            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+
+            return salida.ToString();
+        }//Fin Actualizar_GradoEspecialidad.
 
         //Mostrar datos de la tabla EstadoCivil.
         public List<EstadoCivil> MostrarDatos_EstadoCivil(ref string msjSalida)
@@ -189,20 +225,6 @@ namespace ClassLogicaNegocios
             conex.Dispose();
 
             return listaEstadoC;
-        }
-
-        //Actualizar_Profesor.
-        public string Actualizar_Profesor(int registroN, string nombreN, string apN, string apmN, string generoN, string categoriaN,
-            string correoN, string celularN, int F_edoCivilN, string Nombre, ref string msjSalida)
-        {
-            string sentenciaSql = "update Profesor set RegistroEmpleado='" + registroN + "' ,  Nombre='" + nombreN + "', Ap_pat='" + apN + "'," +
-             " Ap_Mat='" + apmN + "', Genero='" + generoN + "', Categoria='" + categoriaN + "', Correo='" + correoN + "', Celular='" + celularN + "', " +
-             "F_EdoCivil='" + F_edoCivilN + "'where nombre='" + Nombre +"'";
-
-            SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
-
-            return salida.ToString();
-        } // Fin Insertar_Profesor.
+        }//Mostrar datos de la tabla EstadoCivil.
     }
 }
