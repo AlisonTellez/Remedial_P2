@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="AsignaProfeMateriaCuatri.cs" />
     <Compile Include="GradoEspecialidad.cs" />
+    <Compile Include="GrupoCuatrimestre.cs" />
+    <Compile Include="Materia.cs" />
     <Compile Include="PerfilProfe.cs" />
     <Compile Include="Profesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
