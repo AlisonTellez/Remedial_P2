@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Actualizar_RegistroGradoEspecialidad.aspx" />
+    <Content Include="Actualizar_RegistroPerfilProfe.aspx" />
     <Content Include="Actualizar_RegistroProfesor.aspx" />
     <Content Include="img\logo.png" />
     <Content Include="RegistrarGradoEspecialidad.aspx" />
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="Actualizar_RegistroGradoEspecialidad.aspx.designer.cs">
       <DependentUpon>Actualizar_RegistroGradoEspecialidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Actualizar_RegistroPerfilProfe.aspx.cs">
+      <DependentUpon>Actualizar_RegistroPerfilProfe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Actualizar_RegistroPerfilProfe.aspx.designer.cs">
+      <DependentUpon>Actualizar_RegistroPerfilProfe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Actualizar_RegistroProfesor.aspx.cs">
       <DependentUpon>Actualizar_RegistroProfesor.aspx</DependentUpon>

@@ -98,7 +98,7 @@ namespace ClassLogicaNegocios
             salida = cadconex.ModificaBDMasSegura(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida, param1);
 
             return salida;
-        } // Fin Insertar_Profesor.
+        }//Fin Insertar_Profesor.
 
         //Insertar_GradoEspecialidad.
         public Boolean Insertar_GradoEspecialidad(GradoEspecialidad nuevo_gradoespecialidad, ref string msjSalida)
@@ -217,9 +217,9 @@ namespace ClassLogicaNegocios
         }//Fin Eliminar_GradoEspecialidad.
 
         //Eliminar_PerfilProfe.
-        public string Eliminar_PerfilProfe(string evidenciaN, ref string msjSalida)
+        public string Eliminar_PerfilProfe(int profeIDN, ref string msjSalida)
         {
-            string sentenciaSql = "delete from  PerfilProfe where Evidencia='" + evidenciaN + "'";
+            string sentenciaSql = "delete from  PerfilProfe where F_Profe='" + profeIDN + "'";
 
             SqlDataReader salida = null;
             salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
@@ -254,10 +254,9 @@ namespace ClassLogicaNegocios
         }//Fin Actualizar_GradoEspecialidad.
 
         //Actualizar_PerfilProfe.
-        public string Actualizar_PerfilProfe(int F_profe, int F_grado, string estado, DateTime fecha_obtencion, string evidencia, string evidenciaN, ref string msjSalida)
+        public string Actualizar_PerfilProfe(int F_profe, int F_grado, string estado, string fecha_obtencion, string evidencia, string evidenciaN, ref string msjSalida)
         {
-            string sentenciaSql = "update PerfilProfe set F_Profe='" + F_profe + "' ,  F_Grado='" + F_grado + "', Estado='" + estado + "'," +
-             " FechaObtencion='" + fecha_obtencion + "', Evidencia='" + evidencia + "'where evidencia='" + evidenciaN + "'";
+            string sentenciaSql = "update PerfilProfe set F_Profe='" + F_profe + "' ,  F_Grado='" + F_grado + "', Estado='" + estado + "',FechaObtencion='" + fecha_obtencion + "', Evidencia='" + evidencia + "'where Evidencia='" + evidenciaN + "'";
 
             SqlDataReader salida = null;
             salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
@@ -318,8 +317,8 @@ namespace ClassLogicaNegocios
                 {
                     listaProfe.Add(new Profesor
                     {
-                        id_profe = (int)datos[0],
-                        nombre = datos[1].ToString(),
+                        id_profe = (short)datos[0],
+                        nombre = datos[2].ToString(),                     
                     }
                      );
                 }
@@ -352,8 +351,8 @@ namespace ClassLogicaNegocios
                 {
                     listaGradoE.Add(new GradoEspecialidad
                     {
-                        id_grado = (int)datos[0],
-                        institucion = datos[1].ToString(),
+                        id_grado = (short)datos[0],
+                        titulo = datos[1].ToString(),
                     }
                      );
                 }

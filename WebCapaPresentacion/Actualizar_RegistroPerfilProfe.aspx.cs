@@ -10,7 +10,7 @@ using ClassLogicaNegocios;
 
 namespace WebCapaPresentacion
 {
-    public partial class RegistrarPerfilProfe : System.Web.UI.Page
+    public partial class Actualizar_RegistroPerfilProfe : System.Web.UI.Page
     {
         LogicaNegocios ob1 = null;
 
@@ -22,6 +22,8 @@ namespace WebCapaPresentacion
                 Session["ob1"] = ob1;
                 MostrarP();
                 MostrarG();
+                txtestado.Text = (string)Session["estado"];
+                txtevidencia.Text = (string)Session["evidencia"];
             }
             else
             {
@@ -29,27 +31,14 @@ namespace WebCapaPresentacion
             }
         }
 
-        //btn_InsertarPerfilProfe.
-        protected void Button1_Click(object sender, EventArgs e)
+        //btn_Actualizar_RegistroPerfilProfe.
+        protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (dlprofesor.Text != "" && dlgrado.Text != "" && txtestado.Text != "" && Calendar1.SelectedDate.ToString() != "" && txtevidencia.Text != "")
-            {
-                PerfilProfe temp = new PerfilProfe()
-                {
-                    f_profe = Convert.ToInt16(dlprofesor.SelectedValue),
-                    f_grado = Convert.ToInt16(dlgrado.SelectedValue),
-                    estado = txtestado.Text,
-                    fecha_obtencion = Calendar1.SelectedDate,
-                    evidencia = txtevidencia.Text,
-                };
-                string mensaje = "";
-                ob1.Insertar_PerfilProfe(temp, ref mensaje);
-            }
-            else
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "mensaje2", "msbox('¡Error!','Inserte todos los datos','error')", true);
-            }
-        }//btn_InsertarPerfilProfe.
+            string mensaje = "";
+            ob1.Actualizar_PerfilProfe(Convert.ToInt16(dlprofesor.SelectedValue), Convert.ToInt16(dlgrado.SelectedValue), txtestado.Text, Calendar1.SelectedDate.ToShortDateString() , txtevidencia.Text, txtevidencia.Text = (string)Session["evidencia"], ref mensaje);
+
+            Response.Redirect("RegistrarPerfilProfe.aspx");
+        }//btn_Actualizar_RegistroPerfilProfe.
 
         //Mostrar datos Profesor.
         public void MostrarP()
@@ -86,23 +75,5 @@ namespace WebCapaPresentacion
                 }
             }
         }//Mostrar datos GradoEspecialidad.
-
-        //btn_ActualizarPerfilProfe.
-        protected void btnActualizar_Click(object sender, EventArgs e)
-        {
-            Session["estado"] = txtestado.Text;
-            Session["evidencia"] = txtevidencia.Text;
-
-            Response.Redirect("Actualizar_RegistroPerfilProfe.aspx");
-        }//btn_ActualizarPerfilProfe.
-
-        //btn_EliminarPerfilProfe.
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string mensaje = "";
-            ob1.Eliminar_PerfilProfe(Convert.ToInt16(dlprofesor.SelectedValue), ref mensaje);
-            txtestado.Text = "";
-            txtevidencia.Text = "";
-        }//btn_EliminarPerfilProfe.
     }
 }

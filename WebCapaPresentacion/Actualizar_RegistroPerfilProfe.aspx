@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrarPerfilProfe.aspx.cs" Inherits="WebCapaPresentacion.RegistrarPerfilProfe" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actualizar_RegistroPerfilProfe.aspx.cs" Inherits="WebCapaPresentacion.Actualizar_RegistroPerfilProfe" %>
 
 <!DOCTYPE html>
 
@@ -63,13 +63,9 @@
                 <asp:TextBox ID="txtevidencia" runat="server" class="form-control"></asp:TextBox>
             </div>
             <br/>
-            <center><div style="margin-left:400px;">
-                <asp:Button ID="btnInsertar" runat="server" class="btn btn-primary" Text="Registrar" OnClick="Button1_Click"/>
-                &nbsp;&nbsp;&nbsp;
+            <div style="margin-left:400px;">
                 <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click"/>
-                &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEliminar" runat="server" class="btn btn-primary" Text="Eliminar" OnClick="btnEliminar_Click"/>
-            </div></center> 
+            </div>
             <!--Formulario.-->
 
         </div>
