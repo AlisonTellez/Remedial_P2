@@ -10,7 +10,7 @@
 namespace WebCapaPresentacion {
     
     
-    public partial class Actualizar_RegistrarAsignaProfeMateriaCuatri {
+    public partial class Actualizar_RegistroAsignaProfeCuatrimestre {
         
         /// <summary>
         /// Control form1.
@@ -49,13 +49,13 @@ namespace WebCapaPresentacion {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control dlgrado.
+        /// Control dlmateria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dlgrado;
+        protected global::System.Web.UI.WebControls.DropDownList dlmateria;
         
         /// <summary>
         /// Control Label3.

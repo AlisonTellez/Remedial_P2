@@ -37,6 +37,12 @@ namespace WebCapaPresentacion
             string mensaje = "";
             ob1.Actualizar_GradoEspecialidad(txttitulo.Text, txtinstitucion.Text, txtpais.Text, txtextra.Text, txtextra.Text = (string)Session["extra"], ref mensaje);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Actualización correcta!','Los datos han sido actualizados.','success')", true);
+
+            Session["tituloActualizado"] = txttitulo.Text;
+            Session["institucionActualizado"] = txtinstitucion.Text;
+            Session["paisActualizado"] = txtpais.Text;
+            Session["extraActualizado"] = txtextra.Text;
+
             Response.Redirect("RegistrarGradoEspecialidad.aspx");
         }//btn_Actualizar_RegistroGradoEspecialidad.
     }

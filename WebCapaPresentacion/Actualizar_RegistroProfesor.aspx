@@ -14,6 +14,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <!--Bootstrap.-->
 
+    <link href="CSS/sweetalert2.min.css" rel="stylesheet" />
+    <script src="JS/JavaScript.js"></script>
+    <script src="JS/sweetalert2.all.min.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">

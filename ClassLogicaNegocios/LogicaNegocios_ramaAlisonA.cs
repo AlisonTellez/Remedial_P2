@@ -18,7 +18,7 @@ namespace ClassLogicaNegocios
         private AccesoDatos cadconex = new AccesoDatos(@"Data Source=LAPTOP-99LGH8E7\SQLEXPRESS; Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true;");
 
         //Insertar_AsignaProfeMateriaCuatri.
-        public Boolean Insertar_AsignaProfeMateriaCuatri(AsignaProfeMateriaCuatri nuevo_apmc, ref string msjSalida)
+        public Boolean Insertar_AsignaProfeMateriaCuatri(AsignaProfeMateriaCuatrimestre nuevo_apmc, ref string msjSalida)
         {
             SqlParameter[] param1 = new SqlParameter[4];
             param1[0] = new SqlParameter
@@ -98,7 +98,7 @@ namespace ClassLogicaNegocios
                 {
                     listaProfe.Add(new Profesor
                     {
-                       id_profe = (int)datos[0],
+                       id_profe = (short)datos[0],
                        nombre = datos[2].ToString(),
                     }
                      );
@@ -132,7 +132,7 @@ namespace ClassLogicaNegocios
                 {
                     listaMateria.Add(new Materia
                     {
-                        id_materia = (int)datos[0],
+                        id_materia = (short)datos[0],
                         nombre_materia = datos[1].ToString(),
                     }
                      );

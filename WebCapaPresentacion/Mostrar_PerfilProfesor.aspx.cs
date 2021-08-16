@@ -55,5 +55,10 @@ namespace WebCapaPresentacion
                 }
             }
         }//Mostrar datos Profesor.
+
+        protected void btnSig_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Mostrar_ProfeCuatrimestre.aspx");
+        }
     }
 }

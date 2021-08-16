@@ -20,6 +20,10 @@ namespace WebCapaPresentacion
             {
                 ob1 = new LogicaNegocios();
                 Session["ob1"] = ob1;
+                txttitulo.Text = (string)Session["tituloActualizado"];
+                txtinstitucion.Text = (string)Session["institucionActualizado"];
+                txtpais.Text = (string)Session["paisActualizado"];
+                txtextra.Text = (string)Session["extraActualizado"];
             }
             else
             {
@@ -66,10 +70,12 @@ namespace WebCapaPresentacion
             string mensaje = "";
             ob1.Eliminar_GradoEspecialidad(txtextra.Text, ref mensaje);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Eliminación correcta!','Los datos han sido eliminados.','success')", true);
-            txttitulo.Text = "";
-            txtinstitucion.Text = "";
-            txtpais.Text = "";
-            txtextra.Text = "";
+           
         }//btn_EliminarGradoEspecialidad.
+
+        protected void btnSig_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegistrarPerfilProfe.aspx");
+        }
     }
 }

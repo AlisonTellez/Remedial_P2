@@ -13,6 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js""></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <!--Bootstrap.-->
+    <link href="CSS/sweetalert2.min.css" rel="stylesheet" />
+    <script src="JS/JavaScript.js"></script>
+    <script src="JS/sweetalert2.all.min.js"></script>
 
 </head>
 <body>
@@ -58,13 +61,16 @@
                 <asp:TextBox ID="txtevidencia" runat="server" class="form-control"></asp:TextBox>
             </div>
             <br/>
-            <center><div style="margin-left:400px;">
+            <div style="margin-left:400px;">
                 <asp:Button ID="btnInsertar" runat="server" class="btn btn-primary" Text="Registrar" OnClick="Button1_Click"/>
-                &nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click"/>
-                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;  
+                <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click"/>       
+                &nbsp;&nbsp;&nbsp;&nbsp;       
                 <asp:Button ID="btnEliminar" runat="server" class="btn btn-primary" Text="Eliminar" OnClick="btnEliminar_Click"/>
-            </div></center> 
+                &nbsp;&nbsp;&nbsp;&nbsp;  
+                <asp:Button ID="btnSig" runat="server" class="btn btn-primary" Text="-->" OnClick="btnSig_Click"/>  
+            </div> 
+             
             <!--Formulario.-->
 
         </div>

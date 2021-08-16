@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actualizar_RegistrarAsignaProfeMateriaCuatri.aspx.cs" Inherits="WebCapaPresentacion.Actualizar_RegistrarAsignaProfeMateriaCuatri" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actualizar_RegistroAsignaProfeCuatrimestre.aspx.cs" Inherits="WebCapaPresentacion.Actualizar_RegistroAsignaProfeCuatrimestre" %>
 
 <!DOCTYPE html>
 
@@ -6,13 +6,15 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Registro APMC</title>
-
-    <!--Bootstrap.-->
+<!--Bootstrap.-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js""></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-    <!--Bootstrap.-->
+<!--Bootstrap.-->
+    <link href="CSS/sweetalert2.min.css" rel="stylesheet" />
+    <script src="JS/JavaScript.js"></script>
+    <script src="JS/sweetalert2.all.min.js"></script>
 
 </head>
 <body>
@@ -39,7 +41,7 @@
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Materia:"></asp:Label>
                 <br />
-                <asp:DropDownList ID="dlgrado" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="dlmateria" runat="server"></asp:DropDownList>
                 <br />
                  <asp:Label ID="Label3" runat="server" Text="Grupo/Cuatrimestre:"></asp:Label>
                 <br />
@@ -50,7 +52,7 @@
             </div>
             <br/>
             <div style="margin-left:400px;">
-                <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click"/>
+                <asp:Button ID="btnActualizar" runat="server" class="btn btn-primary" Text="Actualizar" OnClick="btnActualizar_Click" />
             </div>
             <!--Formulario.-->
 

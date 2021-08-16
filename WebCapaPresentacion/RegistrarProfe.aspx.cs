@@ -21,6 +21,14 @@ namespace WebCapaPresentacion
                 ob1 = new LogicaNegocios();
                 Session["ob1"] = ob1;
                 Mostrar();
+                txtregisempleado.Text = (string)Session["registroActualizado"];
+                txtnombre.Text = (string)Session["nombreActualizado"];
+                txtapp.Text = (string)Session["AppActualizado"];
+                txtapm.Text = (string)Session["ApmActualizado"];
+                dlgenero.SelectedValue = (string)Session["generoActualizado"];
+                txtcategoria.Text = (string)Session["categoriaActualizado"];
+                txtcorreo.Text = (string)Session["correoActualizado"];
+                txtcelular.Text = (string)Session["celularActualizado"];
             }
             else
             {
@@ -82,6 +90,7 @@ namespace WebCapaPresentacion
             Session["nombre"] = txtnombre.Text;
             Session["App"] = txtapp.Text;
             Session["Apm"] = txtapm.Text;
+            Session["genero"] = dlgenero.SelectedValue;
             Session["categoria"] = txtcategoria.Text;
             Session["correo"] = txtcorreo.Text;
             Session["celular"] = txtcelular.Text;
@@ -99,10 +108,14 @@ namespace WebCapaPresentacion
             txtnombre.Text = "";
             txtapp.Text = "";
             txtapm.Text = "";
-            dlgenero.Text = "";
             txtcategoria.Text = "";
             txtcorreo.Text = "";
             txtcelular.Text = "";
         }//btn_EliminarProfesor.
+
+        protected void btnSig_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegistrarGradoEspecialidad.aspx");
+        }
     }
 }

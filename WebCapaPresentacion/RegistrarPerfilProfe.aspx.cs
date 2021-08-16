@@ -22,6 +22,12 @@ namespace WebCapaPresentacion
                 Session["ob1"] = ob1;
                 MostrarP();
                 MostrarG();
+                txtevidencia.Text = (string)Session["evidencia"];
+                dlprofesor.SelectedValue = (string)Session["profeActualizado"];
+                dlgrado.SelectedValue = (string)Session["gradoActualizado"];
+                txtestado.Text = (string)Session["estadoActualizado"];
+                txtevidencia.Text = (string)Session["evidenciaActualizado"];
+
             }
             else
             {
@@ -91,6 +97,8 @@ namespace WebCapaPresentacion
         //btn_ActualizarPerfilProfe.
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
+            Session["profesor"] = dlprofesor.SelectedValue;
+            Session["grado"] = dlgrado.SelectedValue;
             Session["estado"] = txtestado.Text;
             Session["evidencia"] = txtevidencia.Text;
 
@@ -103,8 +111,12 @@ namespace WebCapaPresentacion
             string mensaje = "";
             ob1.Eliminar_PerfilProfe(Convert.ToInt16(dlprofesor.SelectedValue), ref mensaje);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Eliminación correcta!','Los datos han sido eliminados.','success')", true);
-            txtestado.Text = "";
-            txtevidencia.Text = "";
+            
         }//btn_EliminarPerfilProfe.
+
+        protected void btnSig_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegistrarAsignaProfeMateriaCuatri.aspx");
+        }
     }
 }

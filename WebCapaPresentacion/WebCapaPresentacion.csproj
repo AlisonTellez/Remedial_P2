@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actualizar_RegistroAsignaProfeMateriaCuatri.aspx" />
+    <Content Include="Actualizar_RegistroAsignaProfeCuatrimestre.aspx" />
     <Content Include="Actualizar_RegistroGradoEspecialidad.aspx" />
     <Content Include="Actualizar_RegistroPerfilProfe.aspx" />
     <Content Include="Actualizar_RegistroProfesor.aspx" />
@@ -84,12 +84,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actualizar_RegistroAsignaProfeMateriaCuatri.aspx.cs">
-      <DependentUpon>Actualizar_RegistroAsignaProfeMateriaCuatri.aspx</DependentUpon>
+    <Compile Include="Actualizar_RegistroAsignaProfeCuatrimestre.aspx.cs">
+      <DependentUpon>Actualizar_RegistroAsignaProfeCuatrimestre.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Actualizar_RegistroAsignaProfeMateriaCuatri.aspx.designer.cs">
-      <DependentUpon>Actualizar_RegistroAsignaProfeMateriaCuatri.aspx</DependentUpon>
+    <Compile Include="Actualizar_RegistroAsignaProfeCuatrimestre.aspx.designer.cs">
+      <DependentUpon>Actualizar_RegistroAsignaProfeCuatrimestre.aspx</DependentUpon>
     </Compile>
     <Compile Include="Actualizar_RegistroGradoEspecialidad.aspx.cs">
       <DependentUpon>Actualizar_RegistroGradoEspecialidad.aspx</DependentUpon>

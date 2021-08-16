@@ -28,6 +28,7 @@ namespace WebCapaPresentacion
                 txtcategoria.Text = (string)Session["categoria"];
                 txtcorreo.Text = (string)Session["correo"];
                 txtcelular.Text = (string)Session["celular"];
+                dlgenero.SelectedValue = (string)Session["genero"];
             }
             else
             {
@@ -42,7 +43,21 @@ namespace WebCapaPresentacion
             ob1.Actualizar_Profesor(Convert.ToInt16(txtregisempleado.Text), txtnombre.Text, txtapp.Text, txtapm.Text, dlgenero.SelectedValue,
                 txtcategoria.Text, txtcorreo.Text, txtcelular.Text, Convert.ToInt16(dlestadocivil.SelectedValue), txtnombre.Text = (string)Session["nombre"] , ref mensaje);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Actualización correcta!','Los datos han sido actualizados.','success')", true);
+
+            Session["registroActualizado"] = txtregisempleado.Text;
+            Session["nombreActualizado"] = txtnombre.Text;
+            Session["AppActualizado"] = txtapp.Text;
+            Session["ApmActualizado"] = txtapm.Text;
+            Session["generoActualizado"] = dlgenero.SelectedValue;
+            Session["categoriaActualizado"] = txtcategoria.Text;
+            Session["correoActualizado"] = txtcorreo.Text;
+            Session["celularActualizado"] = txtcelular.Text;
+
+
             Response.Redirect("RegistrarProfe.aspx");
+
+
+
         }//btn_Actualizar_RegistroProfesor.
 
         //Mostrar datos EstadoCivil.

@@ -22,6 +22,8 @@ namespace WebCapaPresentacion
                 Session["ob1"] = ob1;
                 MostrarP();
                 MostrarG();
+                dlprofesor.SelectedValue = (string)Session["profesor"];
+                dlgrado.SelectedValue = (string)Session["grado"];
                 txtestado.Text = (string)Session["estado"];
                 txtevidencia.Text = (string)Session["evidencia"];
             }
@@ -37,7 +39,15 @@ namespace WebCapaPresentacion
             string mensaje = "";
             ob1.Actualizar_PerfilProfe(Convert.ToInt16(dlprofesor.SelectedValue), Convert.ToInt16(dlgrado.SelectedValue), txtestado.Text, Calendar1.SelectedDate.ToShortDateString() , txtevidencia.Text, txtevidencia.Text = (string)Session["evidencia"], ref mensaje);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Actualización correcta!','Los datos han sido actualizados.','success')", true);
+
+            Session["profeActualizado"] = dlprofesor.SelectedValue;
+            Session["gradoActualizado"] = dlgrado.SelectedValue;
+            Session["estadoActualizado"] = txtestado.Text;
+            Session["evidenciaActualizado"] = txtevidencia.Text;
+
+
             Response.Redirect("RegistrarPerfilProfe.aspx");
+
         }//btn_Actualizar_RegistroPerfilProfe.
 
         //Mostrar datos Profesor.

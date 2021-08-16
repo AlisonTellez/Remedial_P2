@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassEntidades
 {
-    public class AsignaProfeMateriaCuatri
+    public class AsignaProfeMateriaCuatrimestre
     {
         public int id_asignapro { get; set; }
         public int f_profe { get; set; }
