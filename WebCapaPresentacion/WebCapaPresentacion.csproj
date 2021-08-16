@@ -70,6 +70,7 @@
     <Content Include="Actualizar_RegistroGradoEspecialidad.aspx" />
     <Content Include="Actualizar_RegistroPerfilProfe.aspx" />
     <Content Include="Actualizar_RegistroProfesor.aspx" />
+    <Content Include="RegistrarAsignaProfeMateriaCuatri.aspx" />
     <Content Include="img\logo.png" />
     <Content Include="RegistrarGradoEspecialidad.aspx" />
     <Content Include="RegistrarPerfilProfe.aspx" />
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="Actualizar_RegistroProfesor.aspx.designer.cs">
       <DependentUpon>Actualizar_RegistroProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarAsignaProfeMateriaCuatri.aspx.cs">
+      <DependentUpon>RegistrarAsignaProfeMateriaCuatri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarAsignaProfeMateriaCuatri.aspx.designer.cs">
+      <DependentUpon>RegistrarAsignaProfeMateriaCuatri.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarGradoEspecialidad.aspx.cs">
