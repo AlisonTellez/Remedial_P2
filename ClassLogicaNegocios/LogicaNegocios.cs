@@ -16,7 +16,7 @@ namespace ClassLogicaNegocios
     public class LogicaNegocios
     {
         //Cadena de conexión.
-        private AccesoDatos cadconex = new AccesoDatos(@"Data Source=LAPTOP-99LGH8E7\SQLEXPRESS; Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true;");
+        private AccesoDatos obAcc = new AccesoDatos(@"Data Source=LAPTOP-99LGH8E7\SQLEXPRESS; Initial Catalog=Bitacora2021LabsUTP; Integrated Security=true;");
 
         //Insertar_Profesor.
         public Boolean Insertar_Profesor(Profesor nuevo_profesor, ref string msjSalida)
@@ -95,7 +95,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "insert into Profesor values(@registro_empleado,@nombre,@ap_pat,@ap_mat,@genero,@categoria,@correo,@celular,@f_edocivil);";
 
             Boolean salida = false;
-            salida = cadconex.ModificaBDMasSegura(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida, param1);
+            salida = obAcc.ModificaBDMasSegura(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida, param1);
 
             return salida;
         }//Fin Insertar_Profesor.
@@ -139,7 +139,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "insert into GradoEspecialidad values(@titulo,@institucion,@pais,@extra);";
 
             Boolean salida = false;
-            salida = cadconex.ModificaBDMasSegura(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida, param1);
+            salida = obAcc.ModificaBDMasSegura(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida, param1);
 
             return salida;
         }//Fin Insertar_GradoEspecialidad.
@@ -188,7 +188,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "insert into PerfilProfe values(@f_profe,@f_grado,@estado,@fecha_obtencion,@evidencia);";
 
             Boolean salida = false;
-            salida = cadconex.ModificaBDMasSegura(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida, param1);
+            salida = obAcc.ModificaBDMasSegura(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida, param1);
 
             return salida;
         }//Fin Insertar_PerfilProfe.
@@ -200,7 +200,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "delete from  Profesor where Nombre='" + nombre + "'";
 
             SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+            salida = obAcc.ConsultaReader(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
         }//Fin Eliminar_Profesor.
@@ -211,7 +211,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "delete from  GradoEspecialidad where Extra='" + extraN + "'";
 
             SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+            salida = obAcc.ConsultaReader(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
         }//Fin Eliminar_GradoEspecialidad.
@@ -222,7 +222,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "delete from  PerfilProfe where F_Profe='" + profeIDN + "'";
 
             SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+            salida = obAcc.ConsultaReader(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
         }//Fin Eliminar_PerfilProfe.
@@ -236,7 +236,7 @@ namespace ClassLogicaNegocios
              "F_EdoCivil='" + F_edoCivilN + "'where nombre='" + Nombre + "'";
 
             SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+            salida = obAcc.ConsultaReader(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
         }//Fin Actualizar_Profesor.
@@ -248,7 +248,7 @@ namespace ClassLogicaNegocios
              " Extra='" + extra + "'where Extra='" + extraN + "'";
 
             SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+            salida = obAcc.ConsultaReader(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
         }//Fin Actualizar_GradoEspecialidad.
@@ -259,7 +259,7 @@ namespace ClassLogicaNegocios
             string sentenciaSql = "update PerfilProfe set F_Profe='" + F_profe + "' ,  F_Grado='" + F_grado + "', Estado='" + estado + "',FechaObtencion='" + fecha_obtencion + "', Evidencia='" + evidencia + "'where Evidencia='" + evidenciaN + "'";
 
             SqlDataReader salida = null;
-            salida = cadconex.ConsultaReader(sentenciaSql, cadconex.AbrirConexion(ref msjSalida), ref msjSalida);
+            salida = obAcc.ConsultaReader(sentenciaSql, obAcc.AbrirConexion(ref msjSalida), ref msjSalida);
 
             return salida.ToString();
         }//Fin Actualizar_PerfilProfe.
@@ -270,10 +270,10 @@ namespace ClassLogicaNegocios
             SqlConnection conex = null;
             string query = "select * from EstadoCivil";
 
-            conex = cadconex.AbrirConexion(ref msjSalida);
+            conex = obAcc.AbrirConexion(ref msjSalida);
 
             SqlDataReader datos = null;
-            datos = cadconex.ConsultaReader(query, conex, ref msjSalida);
+            datos = obAcc.ConsultaReader(query, conex, ref msjSalida);
 
             List<EstadoCivil> listaEstadoC = new List<EstadoCivil>();
             if (datos != null)
@@ -305,10 +305,10 @@ namespace ClassLogicaNegocios
             SqlConnection conex = null;
             string query = "select * from Profesor";
 
-            conex = cadconex.AbrirConexion(ref msjSalida);
+            conex = obAcc.AbrirConexion(ref msjSalida);
 
             SqlDataReader datos = null;
-            datos = cadconex.ConsultaReader(query, conex, ref msjSalida);
+            datos = obAcc.ConsultaReader(query, conex, ref msjSalida);
 
             List<Profesor> listaProfe = new List<Profesor>();
             if (datos != null)
@@ -339,10 +339,10 @@ namespace ClassLogicaNegocios
             SqlConnection conex = null;
             string query = "select * from GradoEspecialidad";
 
-            conex = cadconex.AbrirConexion(ref msjSalida);
+            conex = obAcc.AbrirConexion(ref msjSalida);
 
             SqlDataReader datos = null;
-            datos = cadconex.ConsultaReader(query, conex, ref msjSalida);
+            datos = obAcc.ConsultaReader(query, conex, ref msjSalida);
 
             List<GradoEspecialidad> listaGradoE = new List<GradoEspecialidad>();
             if (datos != null)
@@ -373,10 +373,10 @@ namespace ClassLogicaNegocios
             SqlConnection conex = null;
             string query = "select * from Cuatrimestre";
 
-            conex = cadconex.AbrirConexion(ref msjSalida);
+            conex = obAcc.AbrirConexion(ref msjSalida);
 
             SqlDataReader datos = null;
-            datos = cadconex.ConsultaReader(query, conex, ref msjSalida);
+            datos = obAcc.ConsultaReader(query, conex, ref msjSalida);
 
             List<Cuatrimestre> listaCuatrimestre = new List<Cuatrimestre>();
             if (datos != null)
@@ -409,7 +409,7 @@ namespace ClassLogicaNegocios
             DataSet atrapa = null;
             DataTable t = null;
 
-            atrapa = cadconex.ConsultaDS(query2, cadconex.AbrirConexion(ref mens_salida), ref mens_salida);
+            atrapa = obAcc.ConsultaDS(query2, obAcc.AbrirConexion(ref mens_salida), ref mens_salida);
 
             if (atrapa != null)
             {
@@ -426,7 +426,7 @@ namespace ClassLogicaNegocios
             DataSet atrapa = null;
             DataTable t = null;
 
-            atrapa = cadconex.ConsultaDS(query2, cadconex.AbrirConexion(ref mens_salida), ref mens_salida);
+            atrapa = obAcc.ConsultaDS(query2, obAcc.AbrirConexion(ref mens_salida), ref mens_salida);
 
             if (atrapa != null)
             {
