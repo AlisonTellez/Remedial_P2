@@ -20,27 +20,14 @@
         <div>
 
             <!--Barra de navegación.-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #A5C6C3;">
-                <div class="container-fluid">
-                    <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""/>
-                    <a class="navbar-brand" href="RegistrarProfe.aspx">Bitácora de laboratorio (UTP) 2021.</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="Inicio.aspx">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="RegistroClientes.aspx">Registrar Cliente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="MuestraClientes.aspx">Mostrar Clientes</a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #A5C6C3; top: 0px; left: 0px; height: 45px;">
+            <div class="container-fluid">
+            <img src="img/logo.png" width="50" height="50" class="d-inline-block align-top" alt="" style="margin-left:20px"/>
+            <a class="navbar-brand" style="margin-left:20px">Bitácora de laboratorio (UTP) 2021.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
             </nav>
             <!--Barra de navegación.-->
 
@@ -54,6 +41,7 @@
                 <asp:Label ID="Label2" runat="server" Text="Selecciona cuatrimestre:"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:DropDownList ID="dlseleccuatrimestre" runat="server"></asp:DropDownList>
+                <br />
                 <br />
                 <center><asp:Button ID="btnmostprofcuatri" runat="server" class="btn btn-primary" Text="Mostrar" OnClick="btnmostprofcuatri_Click"/></center>
                 <br />
