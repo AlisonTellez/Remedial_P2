@@ -366,5 +366,37 @@ namespace ClassLogicaNegocios
 
             return listaGradoE;
         }//Mostrar datos de la tabla GradoEspecialidad.
+
+        public DataTable MostrarPerfilProfe(string Nombre, ref string mens_salida)
+        {
+            string query2 = "select Nombre,Ap_pat,Ap_Mat,Titulo,Institucion from PerfilProfe PE inner join Profesor P on PE.F_Profe=P.ID_Profe inner join GradoEspecialidad G on PE.F_Grado=G.Id_Grado where P.Nombre='" + Nombre + "';";
+
+            DataSet atrapa = null;
+            DataTable t = null;
+
+            atrapa = cadconex.ConsultaDS(query2, cadconex.AbrirConexion(ref mens_salida), ref mens_salida);
+
+            if (atrapa != null)
+            {
+                t = atrapa.Tables[0];
+            }
+            return t;
+        }
+
+        public DataTable MostrarBitacora(string Nombre,string Periodo, ref string mens_salida)
+        {
+            string query2 = "select Nombre,Ap_pat,Ap_Mat,NombeMateria,Grado,Letra,ProgramaEd,Periodo,Anio,Inicio,Fin from AsignaProfeMateriaCuatri A inner join Profesor P on A.F_Profe=P.ID_Profe inner join Materia M on A.F_Materia = M.Id_Materia inner join GrupoCuatrimestre Gc on A.F_GrupoCuatri = Gc.Id_GruCuat inner join Grupo G on Gc.F_Grupo=G.Id_grupo inner join ProgramaEducativo Pe on Gc.F_ProgEd=Pe.Id_pe inner join Cuatrimestre C on Gc.F_Cuatri=C.id_Cuatrimestre where P.Nombre='" + Nombre + "' and Periodo='" +Periodo + "';";
+
+            DataSet atrapa = null;
+            DataTable t = null;
+
+            atrapa = cadconex.ConsultaDS(query2, cadconex.AbrirConexion(ref mens_salida), ref mens_salida);
+
+            if (atrapa != null)
+            {
+                t = atrapa.Tables[0];
+            }
+            return t;
+        }
     }
 }
