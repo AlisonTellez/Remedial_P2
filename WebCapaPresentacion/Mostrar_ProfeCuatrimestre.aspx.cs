@@ -35,6 +35,7 @@ namespace WebCapaPresentacion
             string msj = "";
             GridView1.DataSource = ob1.MostrarBitacora(dlselecprofesor.SelectedValue,dlseleccuatrimestre.SelectedValue, ref msj);
             GridView1.DataBind();
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Datos mostrados correctamente!','Los datos han sido mostrados.','success')", true);
         }//btnmostprofcuatri_(Mostrar_ProfeCuatrimestre).
 
         //Mostrar datos Profesor.

@@ -36,7 +36,7 @@ namespace WebCapaPresentacion
         {
             string mensaje = "";
             ob1.Actualizar_PerfilProfe(Convert.ToInt16(dlprofesor.SelectedValue), Convert.ToInt16(dlgrado.SelectedValue), txtestado.Text, Calendar1.SelectedDate.ToShortDateString() , txtevidencia.Text, txtevidencia.Text = (string)Session["evidencia"], ref mensaje);
-
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Actualización correcta!','Los datos han sido actualizados.','success')", true);
             Response.Redirect("RegistrarPerfilProfe.aspx");
         }//btn_Actualizar_RegistroPerfilProfe.
 

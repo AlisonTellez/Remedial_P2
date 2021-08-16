@@ -71,6 +71,9 @@
     <Content Include="Actualizar_RegistroGradoEspecialidad.aspx" />
     <Content Include="Actualizar_RegistroPerfilProfe.aspx" />
     <Content Include="Actualizar_RegistroProfesor.aspx" />
+    <Content Include="CSS\sweetalert2.min.css" />
+    <Content Include="JS\JavaScript.js" />
+    <Content Include="JS\sweetalert2.all.min.js" />
     <Content Include="Mostrar_PerfilProfesor.aspx" />
     <Content Include="Mostrar_ProfeCuatrimestre.aspx" />
     <Content Include="RegistrarAsignaProfeMateriaCuatri.aspx" />

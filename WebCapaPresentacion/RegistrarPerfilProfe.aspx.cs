@@ -44,10 +44,11 @@ namespace WebCapaPresentacion
                 };
                 string mensaje = "";
                 ob1.Insertar_PerfilProfe(temp, ref mensaje);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Insertado correctamente!','" + mensaje + "','success')", true);
             }
             else
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "mensaje2", "msbox('¡Error!','Inserte todos los datos','error')", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Error!','Verificar que todos los campos sean llenados correctamente','error')", true);
             }
         }//btn_InsertarPerfilProfe.
 
@@ -101,6 +102,7 @@ namespace WebCapaPresentacion
         {
             string mensaje = "";
             ob1.Eliminar_PerfilProfe(Convert.ToInt16(dlprofesor.SelectedValue), ref mensaje);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "msj1", "Alerta('¡Eliminación correcta!','Los datos han sido eliminados.','success')", true);
             txtestado.Text = "";
             txtevidencia.Text = "";
         }//btn_EliminarPerfilProfe.
