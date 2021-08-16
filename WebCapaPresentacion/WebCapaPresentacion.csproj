@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Actualizar_RegistrarAsignaProfeMateriaCuatri.aspx" />
+    <Content Include="Actualizar_RegistroAsignaProfeMateriaCuatri.aspx" />
     <Content Include="Actualizar_RegistroGradoEspecialidad.aspx" />
     <Content Include="Actualizar_RegistroPerfilProfe.aspx" />
     <Content Include="Actualizar_RegistroProfesor.aspx" />
+    <Content Include="Mostrar_PerfilProfesor.aspx" />
+    <Content Include="Mostrar_ProfeCuatrimestre.aspx" />
     <Content Include="RegistrarAsignaProfeMateriaCuatri.aspx" />
     <Content Include="img\logo.png" />
     <Content Include="RegistrarGradoEspecialidad.aspx" />
@@ -79,12 +81,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actualizar_RegistrarAsignaProfeMateriaCuatri.aspx.cs">
-      <DependentUpon>Actualizar_RegistrarAsignaProfeMateriaCuatri.aspx</DependentUpon>
+    <Compile Include="Actualizar_RegistroAsignaProfeMateriaCuatri.aspx.cs">
+      <DependentUpon>Actualizar_RegistroAsignaProfeMateriaCuatri.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Actualizar_RegistrarAsignaProfeMateriaCuatri.aspx.designer.cs">
-      <DependentUpon>Actualizar_RegistrarAsignaProfeMateriaCuatri.aspx</DependentUpon>
+    <Compile Include="Actualizar_RegistroAsignaProfeMateriaCuatri.aspx.designer.cs">
+      <DependentUpon>Actualizar_RegistroAsignaProfeMateriaCuatri.aspx</DependentUpon>
     </Compile>
     <Compile Include="Actualizar_RegistroGradoEspecialidad.aspx.cs">
       <DependentUpon>Actualizar_RegistroGradoEspecialidad.aspx</DependentUpon>
@@ -106,6 +108,20 @@
     </Compile>
     <Compile Include="Actualizar_RegistroProfesor.aspx.designer.cs">
       <DependentUpon>Actualizar_RegistroProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mostrar_PerfilProfesor.aspx.cs">
+      <DependentUpon>Mostrar_PerfilProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mostrar_PerfilProfesor.aspx.designer.cs">
+      <DependentUpon>Mostrar_PerfilProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mostrar_ProfeCuatrimestre.aspx.cs">
+      <DependentUpon>Mostrar_ProfeCuatrimestre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mostrar_ProfeCuatrimestre.aspx.designer.cs">
+      <DependentUpon>Mostrar_ProfeCuatrimestre.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistrarAsignaProfeMateriaCuatri.aspx.cs">
       <DependentUpon>RegistrarAsignaProfeMateriaCuatri.aspx</DependentUpon>
